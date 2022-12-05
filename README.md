@@ -20,3 +20,7 @@ Se modificó  además el fichero "rutas.php" para que tenga distintos comportami
 ___
 En este commit se modifica el archivo "index.php" para requerir el uso de distintos controladores, se modifica también el archivo "rutas.php" el cual manejará las distintas llamadas a los controladores y métodos correspondientes, según el tipo de petición (GET, POST, PUT y DELETE), a quien se dirija (cursos o registros) y además si va acompañada de algún "id".
 Se crea el archivo "clientes.controlador.php", por ahora, sólo con el método "create()", y se crea el archivo "cursos.controlador.php", el cual contiene los métodos "index()", "create()", "show()", "update()" y "delete()"; para el manejo de los cursos. 
+
+## Quinto commit
+___
+Se crea el archivo "modelo/conexion.php" que es quien maneja la conexión con la base de datos (el script sql para la creación de la base de datos se encuentra en el directorio sql de este proyecto)
