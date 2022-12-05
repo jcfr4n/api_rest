@@ -24,3 +24,10 @@ Se crea el archivo "clientes.controlador.php", por ahora, sólo con el método "
 ## Quinto commit
 ___
 Se crea el archivo "modelo/conexion.php" que es quien maneja la conexión con la base de datos (el script sql para la creación de la base de datos se encuentra en el directorio sql de este proyecto)
+
+## Sexto commit
+___
+Se modifica el "index.php" para requerir los modelos creados.
+Se modifica el "archivo cursos.controlador.php", para que invoque el método "index($table)" de la clase "ModeloCursos" y obtenga un array con la información de los cursos.
+Se crea el archivo "modelos/curso.modelo.php", en el cual se crea una clase "ModeloCursos" y, por el momento, creamos el método "index($tabla)" que va a ser invocado por el método "index($tabla)" de la clase ControladorCursos, nuestro modelo retornará el resultado de la consulta hecha a la base de datos y ese resultado se insertará en el json que devuelve la api, el cual podemos ver a través de PostMan o de la extensión Thunder Client de Visual Studio Code, al dirigir una petición de tipo get con la palabra "cursos" como endpoint.
+Se crea el archivo "modelos/clientes.modelo.php", vacio de momento.

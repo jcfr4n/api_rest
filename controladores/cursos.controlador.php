@@ -3,8 +3,11 @@
 class ControladorCursos {
     public function index(){
 
+        $cursos = ModeloCursos::index("cursos");
+
         $json = array(
-            "detalle" => "estás en la vista listar cursos"
+            "status" => "200",
+            "detalle" => $cursos
 
         );
 
