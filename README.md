@@ -10,3 +10,8 @@ En el primer commit se crea la carpeta sql que contiene el script para la creaci
 ## Segundo commit
 ___
 Comenzamos con la creación de la estructura del proyecto, se crea el archivo index.php en la raíz, el cuál será el punto de entrada del proyecto. En este punto el archivo requiere el archivo "controladores/rutas.controlador.php", instancia un objeto "ControladorRutas" e invoca su método "inicio()", este método, a su vez, hace un include del fichero "rutas/rutas.php" que, de momento, solo arroja un mensaje.
+
+## Tercer commit
+___
+Se crea el archivo ".htaccess" que, en este caso, hace que toda petición sea dirigida hacia "index.php", que a su vez instancia el controlador de rutas y a través de "rutas.php" será, en definitiva, quien dirigirá las peticiones al sitio correspondiente.
+Se modificó  además el fichero "rutas.php" para que tenga distintos comportamientos según se le pase una url con una petición vacia, de cursos o de registro.
