@@ -35,3 +35,11 @@ Se crea el archivo "modelos/clientes.modelo.php", vacio de momento.
 ## Octavo commit
 ___
 En este commit empezamos con lo que es el envío de datos hacia nuestra base de datos, para ello modificamos el archivo "rutas.php" para que cuando reciba una petición de tipo POST, envíe los datos recibidos al alchivo "clientes.controlador.php" y este a su vez comienza con el proceso de validación. 
+
+## Noveno commit
+___
+En este commit se hace la validacion de los email repetidos, para lo cual deberemos crear un cliente dentro de la base de datos, lo hacemos manualmente, y al pasarlo como parámetro obtenemos un mensaje indicando que el mismo está repetido.
+
+## Décimo commit
+___
+En el archivo "clientes.modelo.php" se crea el método "index()" que nos trae de la base de datos a todos los clientes y en el archivo "clientes.controlador.php" instanciamos un objeto "$clientes" que invoca al método "index()" de la clase "ModeloClientes" y comparamos los email de cada uno de los clientes con el email que estamos recibiendo como parámetro para validar si el email está o no repetido

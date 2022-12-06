@@ -31,7 +31,7 @@ class ControladorClientes{
         }
 
 
-        if (filter_var($datosCliente, FILTER_VALIDATE_EMAIL) == false) {
+        if (filter_var($datosCliente, FILTER_VALIDATE_EMAIL) !== false) {
 
             $json = array(
                 "detalle" => "error en el email"
@@ -43,6 +43,30 @@ class ControladorClientes{
             return;
 
         }
+
+
+        $clientes = ModeloCliente::index("clientes");
+
+        foreach ($clientes as $key => $value) {
+            
+            if ($value['email'] == $datosCliente['email']) {
+
+                $json = array(
+                    "detalle" => "Lo siento, cliente duplicado"
+        
+                );
+        
+                echo json_encode($json);
+        
+                return;
+            }
+
+        }
+
+
+
+
+
 
 
     }
