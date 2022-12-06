@@ -1,16 +1,49 @@
 <?php
 
 class ControladorClientes{
-    public function create(){
+    public function create($datosCliente){
 
-        $json = array(
-            "detalle" => "estas en la vista registro"
+        if (!preg_match("/^[a-zA-ZáéííúüÁÉÍÓÚÜ]*$/",$datosCliente['nombre'])) {
 
-        );
+            $json = array(
+                "status" => "404",
+                "detalle" => "error en el nombre"
+    
+            );
+    
+            echo json_encode($json);
 
-        echo json_encode($json);
+            return;
 
-        return;
+        }
+
+        if (!preg_match("/^[a-zA-ZáéííúüÁÉÍÓÚÜ]*$/",$datosCliente['apellido'])) {
+
+            $json = array(
+                "detalle" => "error en el apellido"
+    
+            );
+    
+            echo json_encode($json);
+
+            return;
+
+        }
+
+
+        if (filter_var($datosCliente, FILTER_VALIDATE_EMAIL) == false) {
+
+            $json = array(
+                "detalle" => "error en el email"
+    
+            );
+    
+            echo json_encode($json);
+
+            return;
+
+        }
+
 
     }
 }

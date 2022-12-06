@@ -80,11 +80,19 @@ if (count(array_filter($arrayRutas)) == 1) {
 
     if (array_filter($arrayRutas)[2] == "registro") {
 
-        if ($_SERVER["REQUEST_METHOD"] == "GET") {
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+            $datosCliente = array
+            (
+                'nombre' => $_POST['nombre'],
+                'apellido' => $_POST['apellido'],
+                'email' => $_POST['email']
+
+            );
 
             $clientes = new ControladorClientes;
 
-            $clientes->create();
+            $clientes->create($datosCliente);
 
         }
 
