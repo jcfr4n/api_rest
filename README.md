@@ -42,4 +42,8 @@ En este commit se hace la validacion de los email repetidos, para lo cual debere
 
 ## Décimo commit
 ___
-En el archivo "clientes.modelo.php" se crea el método "index()" que nos trae de la base de datos a todos los clientes y en el archivo "clientes.controlador.php" instanciamos un objeto "$clientes" que invoca al método "index()" de la clase "ModeloClientes" y comparamos los email de cada uno de los clientes con el email que estamos recibiendo como parámetro para validar si el email está o no repetido
+En el archivo "clientes.modelo.php" se crea el método "index()" que nos trae de la base de datos a todos los clientes y en el archivo "clientes.controlador.php" instanciamos un objeto "$clientes" que invoca al método "index()" de la clase "ModeloClientes" y comparamos los email de cada uno de los clientes con el email que estamos recibiendo como parámetro para validar si el email está o no repetido.
+
+## Décimo primer commit
+___
+Se crea el método "create()" de "ModeloCliente" en el archivo "clientes.modelo.php" y se termina con el método del mismo nombre en "clientes.controlador.php" en donde se genera también las credenciales a los clientes
