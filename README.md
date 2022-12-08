@@ -47,3 +47,8 @@ En el archivo "clientes.modelo.php" se crea el método "index()" que nos trae de
 ## Décimo primer commit
 ___
 Se crea el método "create()" de "ModeloCliente" en el archivo "clientes.modelo.php" y se termina con el método del mismo nombre en "clientes.controlador.php" en donde se genera también las credenciales a los clientes
+
+## Décimo segundo commit
+___
+Se modifica el método "index()" del archivo "cursos.controlador.php" para poder utilizar las características da autenticación básicas contenidas en las herramientas como Postman o Thunder Client, por ejemplo.
+Se le suministra a la api un username que corresponde a nuestro "id_cliente" y un password que corresponde a su vez con nuestra "llave_secreta" y una vez validadas se muestra el listado de cursos.
